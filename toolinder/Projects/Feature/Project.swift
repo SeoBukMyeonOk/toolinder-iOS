@@ -17,8 +17,8 @@ let targets: [Target] = [
         infoPlist: .default,
         sources: ["Sources/**"],
         dependencies: [
-            .project(target: "FeatureHome", path: .relativeToCurrentFile("Home")),
-            .project(target: "FeatureHealth", path: .relativeToCurrentFile("Health"))
+            .project(target: "FeatureCalendar", path: .relativeToCurrentFile("Calendar")),
+            .project(target: "FeatureChart", path: .relativeToCurrentFile("Chart"))
         ]
     )
 ]

@@ -10,24 +10,24 @@ import DependencyPlugin
 
 let targets: [Target] = [
     .init(
-        name: "FeatureHealth",
+        name: "FeatureChart",
         platform: .iOS,
         product: .framework,
-        bundleId: "com.feature.health",
+        bundleId: "com.feature.chart",
         infoPlist: .default,
         sources: ["Sources/**"],
         dependencies: [
-            .target(name: "FeatureHealthInterface"),
-            .target(name: "FeatureHealthTesting"),
-            .target(name: "FeatureHealthTests"),
+            .target(name: "FeatureChartInterface"),
+            .target(name: "FeatureChartTesting"),
+            .target(name: "FeatureChartTests"),
             .project(target: "Core", path: .relativeToRoot("Projects/Core"))
         ]
     ),
     .init(
-        name: "FeatureHealthInterface",
+        name: "FeatureChartInterface",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.health.interface",
+        bundleId: "com.feature.chart.interface",
         infoPlist: .default,
         sources: ["Interface/Sources/**"],
         dependencies: [
@@ -35,10 +35,10 @@ let targets: [Target] = [
         ]
     ),
     .init(
-        name: "FeatureHealthTesting",
+        name: "FeatureChartTesting",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.health.testing",
+        bundleId: "com.feature.chart.testing",
         infoPlist: .default,
         sources: ["Testing/Sources/**"],
         dependencies: [
@@ -46,10 +46,10 @@ let targets: [Target] = [
         ]
     ),
     .init(
-        name: "FeatureHealthTests",
+        name: "FeatureChartTests",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.health.tests",
+        bundleId: "com.feature.chart.tests",
         infoPlist: .default,
         sources: ["Tests/Sources/**"],
         dependencies: [
@@ -59,6 +59,6 @@ let targets: [Target] = [
 ]
 
 let project: Project = .init(
-    name: "FeatureHealth",
+    name: "FeatureChart",
     targets: targets
 )

@@ -10,24 +10,24 @@ import DependencyPlugin
 
 let targets: [Target] = [
     .init(
-        name: "FeatureHome",
+        name: "FeatureCalendar",
         platform: .iOS,
         product: .framework,
-        bundleId: "com.feature.home",
+        bundleId: "com.feature.calendar",
         infoPlist: .default,
         sources: ["Sources/**"],
         dependencies: [
-            .target(name: "FeatureHomeInterface"),
-            .target(name: "FeatureHomeTesting"),
-            .target(name: "FeatureHomeTests"),
+            .target(name: "FeatureCalendarInterface"),
+            .target(name: "FeatureCalendarTesting"),
+            .target(name: "FeatureCalendarTests"),
             .project(target: "Core", path: .relativeToRoot("Projects/Core"))
         ]
     ),
     .init(
-        name: "FeatureHomeInterface",
+        name: "FeatureCalendarInterface",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.home.interface",
+        bundleId: "com.feature.calendar.interface",
         infoPlist: .default,
         sources: ["Interface/Sources/**"],
         dependencies: [
@@ -35,10 +35,10 @@ let targets: [Target] = [
         ]
     ),
     .init(
-        name: "FeatureHomeTesting",
+        name: "FeatureCalendarTesting",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.home.testing",
+        bundleId: "com.feature.calendar.testing",
         infoPlist: .default,
         sources: ["Testing/Sources/**"],
         dependencies: [
@@ -46,10 +46,10 @@ let targets: [Target] = [
         ]
     ),
     .init(
-        name: "FeatureHomeTests",
+        name: "FeatureCalendarTests",
         platform: .iOS,
         product: .staticFramework,
-        bundleId: "com.feature.home.tests",
+        bundleId: "com.feature.calendar.tests",
         infoPlist: .default,
         sources: ["Tests/Sources/**"],
         dependencies: [
@@ -59,6 +59,6 @@ let targets: [Target] = [
 ]
 
 let project: Project = .init(
-    name: "FeatureHome",
+    name: "FeatureCalendar",
     targets: targets
 )
